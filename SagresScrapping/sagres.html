@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+  <link href="../../../App_Themes/TrendsTheme_Diario/Diario.css?fp=637457297780000000" rel="stylesheet" type="text/css"/>
+  <link href="../../../App_Themes/TrendsTheme_Diario/Webparts.css?fp=637457297780000000" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <title>
+   Portal do aluno
+  </title>
+  <link href="../../../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../../Resources/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+  <link href="../../../App_Themes/NewTheme/AcessoExterno.css?fp=637475481000000000" rel="stylesheet" type="text/css"/>
+  <link href="../../../App_Themes/NewTheme/Conteudo.css?fp=637475481000000000" rel="stylesheet" type="text/css"/>
+  <link href="../../../App_Themes/NewTheme/Estrutura.css?fp=637475481000000000" rel="stylesheet" type="text/css"/>
+  <link href="../../../App_Themes/NewTheme/Mensagens.css?fp=637475481000000000" rel="stylesheet" type="text/css"/>
+  <link href="../../../App_Themes/NewTheme/PopUps.css?fp=637475481000000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/Resources/jquery-ui-1.12.1.css?fp=637475481120000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/Resources/jquery.qtip-2.2.1.css?fp=637475481120000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/Resources/jquery-ui.css?fp=637475481120000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/Resources/jquery.qtip.css?fp=637475481120000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/Resources/Styles/App_Themes/NewTheme/NewTheme01/estilo.css?fp=636105826640000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/Resources/Styles/App_Themes/NewTheme/NewTheme01/estilo04.css?fp=636021031160000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/App_Themes/TrendsTheme_Diario/Webparts.css?fp=637457297780000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/App_Themes/TrendsTheme_Diario/Diario.css?fp=637457297780000000" rel="stylesheet" type="text/css"/>
+  <link href="/PortalSagres/Resources/VideoAulas/Trends.Portal.VideoAulas.css?fp=637475481120000000" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="ctl00_Body">
+  <form action="./Default.aspx" id="aspnetForm" method="post" name="aspnetForm">
+   <input id="__VSTATE" name="__VSTATE" type="hidden" value="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"/>
+   <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value=""/>
+   <script src="/PortalSagres/ScriptResource.axd?d=1lqX-GXkk0PmhB2BSQbTHvl7CRYhfHeA5rXQ74_jxyQsQQi6OD47HlMbP8_VJLzrvNUthZc8Lm49qzxKD4hxlLZ1Lm85VrIFBAcYxljH5ZWQPctAN5PRuYzCwpc2d44ldlJxgg2&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('A estrutura do cliente do ASP.NET Ajax falhou ao ser carregada.');
+//]]>
+   </script>
+   <script src="/PortalSagres/Scripts/jquery-2.1.0_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/jquery-ui-1.12.1_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/jquery.qtip-2.2.1_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/ui.datepicker-pt-BR_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/mscorlib_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/linq_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/jquery.maskedinput-1.3.1_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/base64_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/Trends.Ajax.Common_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/Trends.Ajax.Core_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/easyNotify_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/extensions_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/WebCommon_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/AbstractPage_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/jquery.watermarkinput_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/Trends.jQuery_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/Trends.Portal_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/favico-0.2.0_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Modules/Diario/Scripts/InfoClasseSecretarioSeletorPeriodo_637457297900000000.js" type="text/javascript">
+   </script>
+   <script src="/PortalSagres/Scripts/Trends.Portal.VideoAulas_637475481140000000.js" type="text/javascript">
+   </script>
+   <script src="../../../Scripts/effects.core.js" type="text/javascript">
+   </script>
+   <script src="../../../Scripts/effects.slide.js" type="text/javascript">
+   </script>
+   <script src="../../../Scripts/jquery.mCustomScrollbar.concat.min.js" type="text/javascript">
+   </script>
+   <script src="../../../Scripts/TrendsMenuSlide.js" type="text/javascript">
+   </script>
+   <script src="../../../Scripts/CustomRepeater.js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+Trends.InitWebForm = function()
+{
+	Trends_objWebForm = new Trends.AbstractPage('Trends_objWebForm', 'aspnetForm');
+	Trends_objWebForm.sessionExpiredUrl = '/PortalSagres/Acesso.aspx?st=1';
+	Trends_objWebForm.controlEnterKeyBehavior = false;
+	Trends_objWebForm.init();
+}
+Trends.InitWebFormAjax = function()
+{
+}
+//]]>
+   </script>
+   <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="/wEdAFSvVXD1oYELeveMr0vHCmYPWNRSuZ4OPQjNZBX8fMzIGxEbV2mZ4P4SzneY8xHMSV0EXJKerAZswisOnWL3/M5qz3LWkNYgXezMBMjYDPh0jW80b+923hSXAkqUYlNMPj0vNNHNw7gcbNbNbDr4OBp++GkiRkzRRpkFhfvshOQ0nIKl3aNCszT6x1yNT1GZlDn755n8FcwPTN2AZVcl5j27pGkoFe2hJ9JKCcUEJocJY3UV5c7vrYEuMtQr4urLTCDii9EF83Fo+1DwnjiOUoxKmZGHXx2AB9swW29pkml5ruKf2Bfx3Ji+47NjFkaMr1ceZ/uJjOQvHTmiDrMpR6q/mjoVHMC46TbGgx2h0ukKE/EsxOCvUcGpZibUSdLSf2rCiD8F6I9BRm43JEuSLKYX9giKeEqrxH74f89SmFC1iChxcmwa5F5gc6b3gOGMgmq/HFHR1NLO0fJfaWp2r8D9it+HRJ8OUmSK3Xt8+CQLm825Pw5y93IBG1VsvRFh18z+tGSiKwWYoX3crl4wa2jet2/R37zfklSK0Ke4w5N7u9sHeokHyQ8GKsfPm6BAmHmu8Fv6/k4wm+D+j/v+HjevvrFm2cGeM/Otg+liK+Rt9Goh1cg/jWRGsmvbh48PJhBjEQVx97gT9d85aKFUgVv34dHDcDQeEeQWuHhUWFIOVj0X6Fhi2mmjzyk6BPnyxN9R9ZF+EXACfJR3Xa0b6PllJ+atJ3zRgZ4+s1h6wKgn04A5ihrKQbDLNIUlLjCTj/3WW7Ya9Pl7dKUGqwr4EaCTMgvEEwfC+7ghFj8Dy56poAH+e5ld1uUDd2Yik6g870jJsZvAg45Kch3qgjtt2MxQnAMykot2tO4+q4bvMy4O5KRTsexsoA6Tst8co6ZVA/qRr8rEy4X2KVnZwnQb0WAK/zoT3U0qs8WiBehDZTsGlcdrvHRCrf4OeNAg9Cx2qgwy/Rn8WZdL08jA1YgzpOu6CgqCdNAJdSJ6UfQId0TWIdYBBXnYcqpmmniU7YZ87Q5fRaF3KfPCXPlgxli4UheoFVbtW2eX0GkttnBzhFysk6tmqMcjZv1che+6XMlNkT97EraoAiko4JH20m/p9t0wqVertQWBmXGtez2/yT35FytENrNr93NHujXjHKGqIleB8Pb4xhv2NDVyIDB6DA8/2zK9sqDZJ1DhKBtSP7i5K+RKMIAiCEf6d8FOPTI7JXGu+VwFgNbSrLWcbXHRlQGu+G0M7yeXXgkvIvih6OQwYGMgl80g0KHc/df8ALFj8CRdvhpDDErDmjlsnhy7qboGb6vHYp5q9d1MR/K9e3400QwXOfe0MEtfCO37TciP+jifrrezkUX6mi5B4yThV31n+Oz/X7UkxvVu8D+CbRkRZqzNULjsRjQtIYUiLSIjxv9Xj/1WEfFNSaHp60kNZELMvm2nbIwEIwrFvDmXGLAY3NRK/zh+1Sq2UkOr4gVfYm6FPQ/mBUy6pgfI0wmmJ60oMDFJiaWdp5X6S3ILC6xYDwWBJ0VTblwH5BRc7rfpafmcSeVaEO8uD2p0FjuHjVyGykpLYBPO1x6Dlq15SE4mwGc+5nPuVt9+2RFqqM975PlPgouT6D95zH416qxEoOz0n/igHBtCh8RadjkKW/9yE4Inc1UGagKvIXA3GFHZp1qUxskazg4sqIgmx3kBxDKu2eKU7/IeVNyIxuuB+Q3ITAKXm0w2ZXZN0M8Q433sEhrd4YJAYfeSYm7wo94PYlH/NUhW2MYMZr/NZ18XU1Q+DyAnsDnNluEYsvuHTiPn2U/zlUGsKKDehDm4cq0ZYfc+AaF29g=="/>
+   <div class="clear" id="wrap">
+    <div class="topo cor-destaque-bg">
+     <div class="topo-conteudo clear">
+      <div class="topo-acessibilidade">
+       <ul>
+        <li>
+         <a accesskey="1" href="#irconteudo">
+          Ir para o conteúdo
+         </a>
+        </li>
+        <li>
+         <a accesskey="2" href="#irmenu">
+          Ir para menu principal
+         </a>
+        </li>
+        <li>
+         <a href="#" id="linkContraste">
+          Alto contraste
+         </a>
+        </li>
+       </ul>
+      </div>
+      <a class="logo" href="../../../Default.aspx">
+       <img border="0" height="40" id="ctl00_ConteudoTopo_Logomarca" src="../../../App_Themes/NewTheme/Images/marcas/MarcaFundoEscuro.png" width="140"/>
+      </a>
+      <div class="topo-controles">
+       <div class="topo-info-login">
+        <span class="usuario-nome" id="ctl00_ConteudoTopo_UserName">
+         luis jonas cardoso borges
+        </span>
+        <div class="oculto">
+         Tempo restante para expirar a sessão
+        </div>
+        <div class="sessionTimeout icone icone-relogio" id="ctl00_ConteudoTopo_SessionTimeout" title="Tempo restante para expirar a sessão">
+         <div class="session_text" id="ctl00_ConteudoTopo_ctl16">
+         </div>
+         <div id="ctl00_ConteudoTopo_SessionTimeoutTimeoutPanel">
+          <div class="expiring_session_popup" style="display:none;">
+           <div class="session_expiring">
+           </div>
+           <h1>
+            Sessão expirando
+           </h1>
+           <span class="texto_sessao_dialog">
+           </span>
+           <br/>
+           <a class="aRenewSession" href="javascript:void(0)">
+            Clique aqui para continuar usando a aplicação
+           </a>
+          </div>
+          <div class="expired_session_popup" style="display:none;">
+           <div class="session_expired">
+           </div>
+           <h1>
+            Sua sessão expirou
+           </h1>
+           <span class="texto_sessao_dialog">
+            Por razões de segurança, sua sessão foi encerrada.
+           </span>
+           <br/>
+           <a class="aLogout" href="javascript:void(0)">
+            Clique aqui para fazer o login novamente.
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Informações do SAGRES Social -->
+       <div class="conteudo-topo-social">
+        <!-- Links usuários dependentes -->
+        <div class="menu-config-container" id="ctl00_ConteudoTopo_users" style="display:none;">
+         <a class="topo-bt menu-users-bt" tabindex="-1" title="Selecionar dependente">
+          <span class="icone icone-usuario">
+          </span>
+         </a>
+         <div class="menu-users oculto">
+          <span class="oculto">
+           Dependentes
+          </span>
+          <ul>
+          </ul>
+         </div>
+        </div>
+        <!-- Links para os serviços (ex: WebMail, Chat, Blog) -->
+        <div class="menu-servicos-container" id="ctl00_ConteudoTopo_servicos">
+         <a class="topo-bt menu-servicos-bt" tabindex="-1" title="Serviços">
+          <span class="icone icone-globo2">
+          </span>
+         </a>
+         <div class="menu-servicos oculto" id="menu-servicos">
+          <span class="oculto">
+           Serviços
+          </span>
+          <ul id="ctl00_ConteudoTopo_ContServices">
+           <li>
+            <a href="http://webmail.tecnotrends.com.br" target="_blank">
+             WebMail
+            </a>
+           </li>
+           <li>
+            <a href="../../../#" target="_blank">
+             Chat
+            </a>
+           </li>
+           <li>
+            <a href="../../../#" target="_blank">
+             SharePoint
+            </a>
+           </li>
+           <li>
+            <a href="../../../#" target="_blank">
+             SkyDrive
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="conteudo-topo-portal">
+        <div class="menu-config-container">
+         <a class="topo-bt menu-config-bt" tabindex="-1" title="Configurações">
+          <span class="icone icone-config2">
+          </span>
+         </a>
+         <div class="menu-config oculto">
+          <span class="oculto">
+           Configurações
+          </span>
+          <ul>
+           <li>
+            <a href="../../Portal/Membership/CadastroRegistro.aspx" target="_self">
+             Dados Cadastrais
+            </a>
+           </li>
+           <li>
+            <a href="../../Portal/Notificacao/GerenciamentoNotificacao.aspx" target="_self">
+             Gerenciamento de Notificações
+            </a>
+           </li>
+           <li>
+            <a href="../../../AlterarSenha.aspx" target="_self">
+             Alterar Senha
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <a class="topo-bt" href="javascript:__doPostBack('ctl00$ConteudoTopo$InfoTopo1$PortalLoginStatus$ctl00','')">
+         Sair
+        </a>
+       </div>
+       <a href="javascript:__doPostBack('ctl00$ConteudoTopo$InfoTopo1$PortalLoginStatus$ctl00','')" id="ctl00_ConteudoTopo_InfoTopo1_PortalLoginStatus" tabindex="-1">
+       </a>
+       <script type="text/javascript">
+        jQuery.support.cors = true;
+       </script>
+      </div>
+     </div>
+     <div class="menu-topo">
+      <div class="menu-centralizar">
+       <div class="menu-modulos-container">
+        <a class="menu-modulos-bt" href="javascript:void(0)" tabindex="-1" title="Módulos do Portal">
+         Portal SAGRES
+         <span class="icone icone-baixo-1">
+         </span>
+        </a>
+        <div class="menu-modulos oculto" id="ctl00_ConteudoTopo_MainTab">
+         <!-- Tabs da aplicação (por código) -->
+         <ul>
+          <li>
+           <a class="link_menu1" href="../../portal/default.aspx">
+            Portal SAGRES
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="menu-rolagem">
+        <a class="anterior" id="anterior" title="Clique para rolar o menu">
+         <span class="icone icone-esq-1">
+         </span>
+        </a>
+        <div class="pai" id="pai">
+         <div class="filho" id="filho">
+          <ul id="ctl00_ConteudoTopo_MainMenuItems">
+           <!-- Items do menu da aplicação (por código) -->
+           <li>
+            <a href="Default.aspx">
+             Portal do aluno
+            </a>
+           </li>
+           <li>
+            <a href="../../portal/services/Questionario.srvx">
+             Questionário
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <a class="proximo" id="proximo" title="Clique para rolar o menu">
+         <span class="icone icone-dir-1">
+         </span>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="conteudo-principal clear">
+     <a class="oculto" href="#" id="irconteudo">
+      Início do conteúdo
+     </a>
+     <div class="coluna-metade coluna-1">
+      <section class="webpart" id="ctl00_MasterPlaceHolder_divMinhasTurmas">
+       <div class="webpart-titulo cor-destaque">
+        Minhas turmas
+       </div>
+       <div class="wp-seletor-classes" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_divSeletorPeriodo">
+        <span class="wp-seletor-classes-titulo">
+         Período letivo
+        </span>
+        <a class="icone icone-esq-1 wp-seletor-classes-ant" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_anterior">
+        </a>
+        <div class="wp-seletor-classes-pai" id="pai">
+         <div class="wp-seletor-classes-filho" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_divfilho" style="min-width:402px;;">
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_upSeletorPeriodo">
+           <ul id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_ulPeriodoLetivo">
+            <li class="ativo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_liPeriodoLetivo1000000752">
+             <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$lkbPeriodoLetivo1','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_lkbPeriodoLetivo1">
+              20202
+             </a>
+            </li>
+            <li class="inativo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_liPeriodoLetivo1000000729">
+             <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$lkbPeriodoLetivo2','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_lkbPeriodoLetivo2">
+              20201
+             </a>
+            </li>
+            <li class="inativo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_liPeriodoLetivo1000000710">
+             <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$lkbPeriodoLetivo3','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_lkbPeriodoLetivo3">
+              20192
+             </a>
+            </li>
+            <li class="inativo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_liPeriodoLetivo1000000308">
+             <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$lkbPeriodoLetivo4','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_lkbPeriodoLetivo4">
+              20191
+             </a>
+            </li>
+            <li class="inativo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_liPeriodoLetivo1000000255">
+             <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$lkbPeriodoLetivo5','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_lkbPeriodoLetivo5">
+              20182
+             </a>
+            </li>
+            <li class="inativo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_liPeriodoLetivo1000000243">
+             <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$lkbPeriodoLetivo6','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_lkbPeriodoLetivo6">
+              20181
+             </a>
+            </li>
+            <li class="inativo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_liPeriodoLetivo-1">
+             <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$lkbPeriodoLetivo7','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_lkbPeriodoLetivo7">
+              Todos
+             </a>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <a class="icone icone-dir-1 wp-seletor-classes-prox" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_proximo">
+        </a>
+       </div>
+       <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_ctl00">
+        <section class="webpart-aluno-item" id="divConteudo">
+         <h1 class="webpart-aluno-titulo">
+          <a class="webpart-aluno-nome cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl00$ucInfoTurmaAluno$btDescricao','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_btDescricao">
+           DCET0743 - ARQUITETURA DE COMPUTADORES I
+          </a>
+         </h1>
+         <div>
+          <span class="oculto">
+           Período letivo
+          </span>
+          <span class="webpart-aluno-periodo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_lblPeriodo" title="Período Letivo">
+           20202
+          </span>
+          <span class="oculto">
+           Carga horária
+          </span>
+          <span class="webpart-aluno-codigo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_lblCargaHoraria" title="Carga horária total">
+           60h
+          </span>
+         </div>
+         <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_tbAulas">
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_trUltimaAula">
+           <strong>
+            Última aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_lblUltimaAula">
+            11/08/2021 - Exercício instrução relacional slt
+           </span>
+          </div>
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_trProximaAula">
+           <strong>
+            Próxima aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_lblProximaAula">
+            Não existe aula cadastrada
+           </span>
+          </div>
+         </div>
+         <div class="webpart-aluno-resultado" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_resultadoAluno">
+          <span class="icone icone-circ-ajuda" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_imgResultadoNaoDivulgado">
+          </span>
+          <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_lblResultado">
+           Não existe resultado final divulgado pelo professor.
+          </span>
+         </div>
+         <div class="webpart-aluno-links webpart-aluno-links-up">
+          <div class="webpart-dropdown webpart-dropdown-up">
+           <a class="cor-destaque webpart-dropdown-link webpart-dropdown-link-up" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl00$ucInfoTurmaAluno$btAulas','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_btAulas">
+            Aulas
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_divDetalheFrequencia">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl00$ucInfoTurmaAluno$btFrequencia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_btFrequencia">
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_lblFrequencia">
+              22 faltas
+             </span>
+            </strong>
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_divDetalheNotas">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl00$ucInfoTurmaAluno$btMedia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_btMedia">
+            Média:
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl00_ucInfoTurmaAluno_lblMedia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+         </div>
+        </section>
+        <section class="webpart-aluno-item" id="divConteudo">
+         <h1 class="webpart-aluno-titulo">
+          <a class="webpart-aluno-nome cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl01$ucInfoTurmaAluno$btDescricao','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_btDescricao">
+           DCSA0125 - CONTABILIDADE GERAL
+          </a>
+         </h1>
+         <div>
+          <span class="oculto">
+           Período letivo
+          </span>
+          <span class="webpart-aluno-periodo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_lblPeriodo" title="Período Letivo">
+           20202
+          </span>
+          <span class="oculto">
+           Carga horária
+          </span>
+          <span class="webpart-aluno-codigo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_lblCargaHoraria" title="Carga horária total">
+           60h
+          </span>
+         </div>
+         <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_tbAulas">
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_trUltimaAula">
+           <strong>
+            Última aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_lblUltimaAula">
+            Não existe aula cadastrada
+           </span>
+          </div>
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_trProximaAula">
+           <strong>
+            Próxima aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_lblProximaAula">
+            Não existe aula cadastrada
+           </span>
+          </div>
+         </div>
+         <div class="webpart-aluno-resultado" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_resultadoAluno">
+          <span class="icone icone-circ-ajuda" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_imgResultadoNaoDivulgado">
+          </span>
+          <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_lblResultado">
+           Não existe resultado final divulgado pelo professor.
+          </span>
+         </div>
+         <div class="webpart-aluno-links webpart-aluno-links-up">
+          <div class="webpart-dropdown webpart-dropdown-up">
+           <a class="cor-destaque webpart-dropdown-link webpart-dropdown-link-up" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl01$ucInfoTurmaAluno$btAulas','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_btAulas" onclick="return false;">
+            Aulas
+           </a>
+           <div class="webpart-dropdown-menu webpart-dropdown-menu-up oculto" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_dropdownMenu">
+            <ul id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_ulFuncoes">
+             <li>
+              <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl01$ucInfoTurmaAluno$ctl01','')" link="~/Modules/Diario/Aluno/Classe/ConsultaAulas.aspx">
+               TCOMP     (Teórica)
+              </a>
+             </li>
+             <li>
+              <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl01$ucInfoTurmaAluno$ctl03','')" link="~/Modules/Diario/Aluno/Classe/ConsultaAulas.aspx">
+               PCOMP     (Prática)
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_divDetalheFrequencia">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl01$ucInfoTurmaAluno$btFrequencia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_btFrequencia">
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_lblFrequencia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_divDetalheNotas">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl01$ucInfoTurmaAluno$btMedia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_btMedia">
+            Média:
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl01_ucInfoTurmaAluno_lblMedia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+         </div>
+        </section>
+        <section class="webpart-aluno-item" id="divConteudo">
+         <h1 class="webpart-aluno-titulo">
+          <a class="webpart-aluno-nome cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl02$ucInfoTurmaAluno$btDescricao','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_btDescricao">
+           DCET0732 - FÍSICA PARA COMPUTAÇÃO I
+          </a>
+         </h1>
+         <div>
+          <span class="oculto">
+           Período letivo
+          </span>
+          <span class="webpart-aluno-periodo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_lblPeriodo" title="Período Letivo">
+           20202
+          </span>
+          <span class="oculto">
+           Carga horária
+          </span>
+          <span class="webpart-aluno-codigo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_lblCargaHoraria" title="Carga horária total">
+           60h
+          </span>
+         </div>
+         <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_tbAulas">
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_trUltimaAula">
+           <strong>
+            Última aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_lblUltimaAula">
+            Não existe aula cadastrada
+           </span>
+          </div>
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_trProximaAula">
+           <strong>
+            Próxima aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_lblProximaAula">
+            Não existe aula cadastrada
+           </span>
+          </div>
+         </div>
+         <div class="webpart-aluno-resultado" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_resultadoAluno">
+          <span class="icone icone-circ-ajuda" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_imgResultadoNaoDivulgado">
+          </span>
+          <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_lblResultado">
+           Não existe resultado final divulgado pelo professor.
+          </span>
+         </div>
+         <div class="webpart-aluno-links webpart-aluno-links-up">
+          <div class="webpart-dropdown webpart-dropdown-up">
+           <a class="cor-destaque webpart-dropdown-link webpart-dropdown-link-up" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl02$ucInfoTurmaAluno$btAulas','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_btAulas" onclick="return false;">
+            Aulas
+           </a>
+           <div class="webpart-dropdown-menu webpart-dropdown-menu-up oculto" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_dropdownMenu">
+            <ul id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_ulFuncoes">
+             <li>
+              <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl02$ucInfoTurmaAluno$ctl01','')" link="~/Modules/Diario/Aluno/Classe/ConsultaAulas.aspx">
+               TComp     (Teórica)
+              </a>
+             </li>
+             <li>
+              <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl02$ucInfoTurmaAluno$ctl03','')" link="~/Modules/Diario/Aluno/Classe/ConsultaAulas.aspx">
+               PComp     (Prática)
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_divDetalheFrequencia">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl02$ucInfoTurmaAluno$btFrequencia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_btFrequencia">
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_lblFrequencia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_divDetalheNotas">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl02$ucInfoTurmaAluno$btMedia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_btMedia">
+            Média:
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl02_ucInfoTurmaAluno_lblMedia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+         </div>
+        </section>
+        <section class="webpart-aluno-item" id="divConteudo">
+         <h1 class="webpart-aluno-titulo">
+          <a class="webpart-aluno-nome cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl03$ucInfoTurmaAluno$btDescricao','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_btDescricao">
+           DFCH0796 - MÉTODOS E TÉCNICAS DE PESQUISA (4)
+          </a>
+         </h1>
+         <div>
+          <span class="oculto">
+           Período letivo
+          </span>
+          <span class="webpart-aluno-periodo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_lblPeriodo" title="Período Letivo">
+           20202
+          </span>
+          <span class="oculto">
+           Carga horária
+          </span>
+          <span class="webpart-aluno-codigo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_lblCargaHoraria" title="Carga horária total">
+           60h
+          </span>
+         </div>
+         <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_tbAulas">
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_trUltimaAula">
+           <strong>
+            Última aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_lblUltimaAula">
+            30/07/2021 - Estudo dirigido - referências bibliográficas
+           </span>
+          </div>
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_trProximaAula">
+           <strong>
+            Próxima aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_lblProximaAula">
+            Não existe aula cadastrada
+           </span>
+          </div>
+         </div>
+         <div class="webpart-aluno-resultado" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_resultadoAluno">
+          <span class="icone icone-circ-ajuda" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_imgResultadoNaoDivulgado">
+          </span>
+          <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_lblResultado">
+           Não existe resultado final divulgado pelo professor.
+          </span>
+         </div>
+         <div class="webpart-aluno-links webpart-aluno-links-up">
+          <div class="webpart-dropdown webpart-dropdown-up">
+           <a class="cor-destaque webpart-dropdown-link webpart-dropdown-link-up" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl03$ucInfoTurmaAluno$btAulas','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_btAulas" onclick="return false;">
+            Aulas
+           </a>
+           <div class="webpart-dropdown-menu webpart-dropdown-menu-up oculto" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_dropdownMenu">
+            <ul id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_ulFuncoes">
+             <li>
+              <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl03$ucInfoTurmaAluno$ctl01','')" link="~/Modules/Diario/Aluno/Classe/ConsultaAulas.aspx">
+               TCOMP     (Teórica)
+              </a>
+             </li>
+             <li>
+              <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl03$ucInfoTurmaAluno$ctl03','')" link="~/Modules/Diario/Aluno/Classe/ConsultaAulas.aspx">
+               PCOMP     (Prática)
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_divDetalheFrequencia">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl03$ucInfoTurmaAluno$btFrequencia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_btFrequencia">
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_lblFrequencia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_divDetalheNotas">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl03$ucInfoTurmaAluno$btMedia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_btMedia">
+            Média:
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl03_ucInfoTurmaAluno_lblMedia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+         </div>
+        </section>
+        <section class="webpart-aluno-item" id="divConteudo">
+         <h1 class="webpart-aluno-titulo">
+          <a class="webpart-aluno-nome cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl04$ucInfoTurmaAluno$btDescricao','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_btDescricao">
+           DCET0741 - REDES DE COMPUTADORES I (2)
+          </a>
+         </h1>
+         <div>
+          <span class="oculto">
+           Período letivo
+          </span>
+          <span class="webpart-aluno-periodo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_lblPeriodo" title="Período Letivo">
+           20202
+          </span>
+          <span class="oculto">
+           Carga horária
+          </span>
+          <span class="webpart-aluno-codigo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_lblCargaHoraria" title="Carga horária total">
+           60h
+          </span>
+         </div>
+         <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_tbAulas">
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_trUltimaAula">
+           <strong>
+            Última aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_lblUltimaAula">
+            Não existe aula cadastrada
+           </span>
+          </div>
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_trProximaAula">
+           <strong>
+            Próxima aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_lblProximaAula">
+            Não existe aula cadastrada
+           </span>
+          </div>
+         </div>
+         <div class="webpart-aluno-resultado" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_resultadoAluno">
+          <span class="icone icone-circ-ajuda" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_imgResultadoNaoDivulgado">
+          </span>
+          <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_lblResultado">
+           Não existe resultado final divulgado pelo professor.
+          </span>
+         </div>
+         <div class="webpart-aluno-links webpart-aluno-links-up">
+          <div class="webpart-dropdown webpart-dropdown-up">
+           <a class="cor-destaque webpart-dropdown-link webpart-dropdown-link-up" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl04$ucInfoTurmaAluno$btAulas','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_btAulas">
+            Aulas
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_divDetalheFrequencia">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl04$ucInfoTurmaAluno$btFrequencia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_btFrequencia">
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_lblFrequencia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_divDetalheNotas">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl04$ucInfoTurmaAluno$btMedia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_btMedia">
+            Média:
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl04_ucInfoTurmaAluno_lblMedia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+         </div>
+        </section>
+        <section class="webpart-aluno-item" id="divConteudo">
+         <h1 class="webpart-aluno-titulo">
+          <a class="webpart-aluno-nome cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl05$ucInfoTurmaAluno$btDescricao','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_btDescricao">
+           DCET0729 - TEORIA DOS GRAFOS (2)
+          </a>
+         </h1>
+         <div>
+          <span class="oculto">
+           Período letivo
+          </span>
+          <span class="webpart-aluno-periodo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_lblPeriodo" title="Período Letivo">
+           20202
+          </span>
+          <span class="oculto">
+           Carga horária
+          </span>
+          <span class="webpart-aluno-codigo" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_lblCargaHoraria" title="Carga horária total">
+           60h
+          </span>
+         </div>
+         <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_tbAulas">
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_trUltimaAula">
+           <strong>
+            Última aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_lblUltimaAula">
+            19/07/2021 - Apresentação plano de curso/Metodologia/avaliação/ Revisão: Argumento lógico matemático. Importancia
+           </span>
+          </div>
+          <div class="webpart-aluno-detalhe" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_trProximaAula">
+           <strong>
+            Próxima aula:
+           </strong>
+           <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_lblProximaAula">
+            08/11/2021 - Avaliação Individual III Unidade
+           </span>
+          </div>
+         </div>
+         <div class="webpart-aluno-resultado" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_resultadoAluno">
+          <span class="icone icone-circ-ajuda" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_imgResultadoNaoDivulgado">
+          </span>
+          <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_lblResultado">
+           Não existe resultado final divulgado pelo professor.
+          </span>
+         </div>
+         <div class="webpart-aluno-links webpart-aluno-links-up">
+          <div class="webpart-dropdown webpart-dropdown-up">
+           <a class="cor-destaque webpart-dropdown-link webpart-dropdown-link-up" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl05$ucInfoTurmaAluno$btAulas','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_btAulas">
+            Aulas
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_divDetalheFrequencia">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl05$ucInfoTurmaAluno$btFrequencia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_btFrequencia">
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_lblFrequencia">
+              4 faltas
+             </span>
+            </strong>
+           </a>
+          </div>
+          <div id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_divDetalheNotas">
+           <a class="cor-destaque" href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucListaInfoTurmaAluno$Repeater$ctl05$ucInfoTurmaAluno$btMedia','')" id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_btMedia">
+            Média:
+            <strong>
+             <span id="ctl00_MasterPlaceHolder_ucListaInfoTurmaAluno_Repeater_ctl05_ucInfoTurmaAluno_lblMedia">
+              Não divulgada
+             </span>
+            </strong>
+           </a>
+          </div>
+         </div>
+        </section>
+       </div>
+      </section>
+     </div>
+     <div class="coluna-metade" id="dir">
+      <section class="webpart calendario-full" id="ctl00_MasterPlaceHolder_divCalendarioAcademico">
+       <div class="webpart-titulo cor-destaque">
+        Calendário Acadêmico
+       </div>
+       <div id="ctl00_MasterPlaceHolder_ucCalendarioAcademico_UpdatePanel1">
+        <div class="webpart-calendario">
+         <div aria-hidden="true">
+          <table border="0" cellpadding="2" cellspacing="0" class="calendario" id="ctl00_MasterPlaceHolder_ucCalendarioAcademico_Calendar">
+           <tr>
+            <td bgcolor="Transparent" colspan="7">
+             <table border="0" cellspacing="0" class="cabecalho-tabela" width="100%">
+              <tr>
+               <td width="15%">
+                <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucCalendarioAcademico$Calendar','V7944')" style="color:Black">
+                 <span class="webpart-calendario-nav icone icone-esq-1" title="Mês anterior">
+                 </span>
+                </a>
+               </td>
+               <td align="center" nowrap="nowrap" width="70%">
+                novembro de 2021
+               </td>
+               <td align="right" width="15%">
+                <a href="javascript:__doPostBack('ctl00$MasterPlaceHolder$ucCalendarioAcademico$Calendar','V8005')" style="color:Black">
+                 <span class="webpart-calendario-nav icone icone-dir-1" title="Próximo mês">
+                 </span>
+                </a>
+               </td>
+              </tr>
+             </table>
+            </td>
+           </tr>
+           <tr>
+            <td align="center" class="webpart-calendario-cabecalho">
+             d
+            </td>
+            <td align="center" class="webpart-calendario-cabecalho">
+             s
+            </td>
+            <td align="center" class="webpart-calendario-cabecalho">
+             t
+            </td>
+            <td align="center" class="webpart-calendario-cabecalho">
+             q
+            </td>
+            <td align="center" class="webpart-calendario-cabecalho">
+             q
+            </td>
+            <td align="center" class="webpart-calendario-cabecalho">
+             s
+            </td>
+            <td align="center" class="webpart-calendario-cabecalho">
+             s
+            </td>
+           </tr>
+           <tr>
+            <td align="center" class="dia-nao-util" width="14%">
+             31
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             1
+            </td>
+            <td align="center" class="celula-destaque cor-destaque-bg" width="14%">
+             2
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             3
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             4
+            </td>
+            <td align="center" bgcolor="Silver" class="dia-selecionado" width="14%">
+             <font color="White">
+              5
+             </font>
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             6
+            </td>
+           </tr>
+           <tr>
+            <td align="center" class="dia-nao-util" width="14%">
+             7
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             8
+            </td>
+            <td align="center" class="celula-destaque cor-destaque-bg" width="14%">
+             9
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             10
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             11
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             12
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             13
+            </td>
+           </tr>
+           <tr>
+            <td align="center" class="dia-nao-util" width="14%">
+             14
+            </td>
+            <td align="center" class="celula-destaque cor-destaque-bg" width="14%">
+             15
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             16
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             17
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             18
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             19
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             20
+            </td>
+           </tr>
+           <tr>
+            <td align="center" class="dia-nao-util" width="14%">
+             21
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             22
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             23
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             24
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             25
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             26
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             27
+            </td>
+           </tr>
+           <tr>
+            <td align="center" class="dia-nao-util" width="14%">
+             28
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             29
+            </td>
+            <td align="center" class="celula-dia" width="14%">
+             30
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             1
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             2
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             3
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             4
+            </td>
+           </tr>
+           <tr>
+            <td align="center" class="dia-nao-util" width="14%">
+             5
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             6
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             7
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             8
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             9
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             10
+            </td>
+            <td align="center" class="dia-nao-util" width="14%">
+             11
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="webpart-calendario-lista" id="ctl00_MasterPlaceHolder_ucCalendarioAcademico_divMensagensCalendario">
+          <ul id="ctl00_MasterPlaceHolder_ucCalendarioAcademico_ucListaMensagens_ulLista">
+           <a>
+            <li>
+             02/11 - Finados
+            </li>
+           </a>
+           <a>
+            <li>
+             09/11 - Emancipação Política de Vit. da Conquista
+            </li>
+           </a>
+           <a>
+            <li>
+             15/11 - Proclamação da República
+            </li>
+           </a>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </section>
+      <section class="webpart" id="ctl00_MasterPlaceHolder_divMuralRecados">
+       <div class="webpart-titulo cor-destaque">
+        Mural de recados
+       </div>
+       <div id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_UpdatePanel">
+        <div id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_conteudo">
+         <article class="recado recado-classe" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl00_ucInfoRecados_RecadoItem">
+          <div class="icone recado-escopo-icone" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl00_ucInfoRecados_EscopoIcone">
+          </div>
+          <span class="oculto">
+           Este recado foi enviado para:
+          </span>
+          <span class="recado-escopo" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl00_ucInfoRecados_lblEscopo">
+           DCET0736 - INTERAÇÃO HUMANO-COMPUTADOR(P01COMP) - 20191, DCET0736 - INTERAÇÃO HUMANO-COMPUTADOR(T01COMP) - 20191
+          </span>
+          <span class="oculto">
+           Enviado em:
+          </span>
+          <span class="recado-data" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl00_ucInfoRecados_lblData">
+           26/8/2019
+          </span>
+          <span class="oculto">
+           Recado:
+          </span>
+          <p class="recado-texto">
+           <span>
+            Descrição do Recado:
+           </span>
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl00_ucInfoRecados_lblTextoRecado">
+            Atividade 01. Resumo do capitulo 2, do livro Interação Humano Computador. BARBOSA, Simone Diniz Junqueira. SILVA, Bruno Santana da. Interação humano-computador. Rio de Janeiro: Elsevier, 2010. Data: 29/08/2019 Grupo: máximo com 3 alunos.
+
+Atividade 02. Produção de Flash-cards do capitulo 3, do livro Interação Humano Computador. BARBOSA, Simone Diniz Junqueira. SILVA, Bruno Santana da. Interação humano-computador. Rio de Janeiro: Elsevier, 2010. Data: 05/09/2019 Grupo: máximo com 3 alunos.
+           </span>
+          </p>
+          <p>
+           <span class="oculto" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl00_ucInfoRecados_lblAnexo">
+            Anexo:
+           </span>
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl00_ucInfoRecados_lblDsAnexo" target="_blank">
+           </span>
+           <span class="material_apoio_arquivo">
+           </span>
+          </p>
+          <span class="oculto">
+           Enviado por:
+          </span>
+          <i class="recado-remetente" style="float: left">
+           De
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl00_ucInfoRecados_lblRemetente">
+            ALZIRA FERREIRA DA SILVA
+           </span>
+          </i>
+         </article>
+         <article class="recado recado-classe" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl01_ucInfoRecados_RecadoItem">
+          <div class="icone recado-escopo-icone" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl01_ucInfoRecados_EscopoIcone">
+          </div>
+          <span class="oculto">
+           Este recado foi enviado para:
+          </span>
+          <span class="recado-escopo" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl01_ucInfoRecados_lblEscopo">
+           DCET0725 - MATEMÁTICA DISCRETA(T01COMP) - 20182
+          </span>
+          <span class="oculto">
+           Enviado em:
+          </span>
+          <span class="recado-data" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl01_ucInfoRecados_lblData">
+           4/12/2018
+          </span>
+          <span class="oculto">
+           Recado:
+          </span>
+          <p class="recado-texto">
+           <span>
+            Descrição do Recado:
+           </span>
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl01_ucInfoRecados_lblTextoRecado">
+            Leitura e resolução de exercicios 1 ao 4.  ://www.ime.unicamp.br/~valle/PahttpsstCourses/Licao4.pdf.
+           </span>
+          </p>
+          <p>
+           <span class="oculto" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl01_ucInfoRecados_lblAnexo">
+            Anexo:
+           </span>
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl01_ucInfoRecados_lblDsAnexo" target="_blank">
+           </span>
+           <span class="material_apoio_arquivo">
+           </span>
+          </p>
+          <span class="oculto">
+           Enviado por:
+          </span>
+          <i class="recado-remetente" style="float: left">
+           De
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl01_ucInfoRecados_lblRemetente">
+            ALZIRA FERREIRA DA SILVA
+           </span>
+          </i>
+         </article>
+         <article class="recado recado-classe" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl02_ucInfoRecados_RecadoItem">
+          <div class="icone recado-escopo-icone" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl02_ucInfoRecados_EscopoIcone">
+          </div>
+          <span class="oculto">
+           Este recado foi enviado para:
+          </span>
+          <span class="recado-escopo" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl02_ucInfoRecados_lblEscopo">
+           DCET0725 - MATEMÁTICA DISCRETA(T01COMP) - 20181
+          </span>
+          <span class="oculto">
+           Enviado em:
+          </span>
+          <span class="recado-data" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl02_ucInfoRecados_lblData">
+           25/10/2018
+          </span>
+          <span class="oculto">
+           Recado:
+          </span>
+          <p class="recado-texto">
+           <span>
+            Descrição do Recado:
+           </span>
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl02_ucInfoRecados_lblTextoRecado">
+            Lista de exercício no dia 22/10
+           </span>
+          </p>
+          <p>
+           <span class="oculto" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl02_ucInfoRecados_lblAnexo">
+            Anexo:
+           </span>
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl02_ucInfoRecados_lblDsAnexo" target="_blank">
+           </span>
+           <span class="material_apoio_arquivo">
+           </span>
+          </p>
+          <span class="oculto">
+           Enviado por:
+          </span>
+          <i class="recado-remetente" style="float: left">
+           De
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl02_ucInfoRecados_lblRemetente">
+            ALZIRA FERREIRA DA SILVA
+           </span>
+          </i>
+         </article>
+         <article class="recado recado-classe" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl03_ucInfoRecados_RecadoItem">
+          <div class="icone recado-escopo-icone" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl03_ucInfoRecados_EscopoIcone">
+          </div>
+          <span class="oculto">
+           Este recado foi enviado para:
+          </span>
+          <span class="recado-escopo" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl03_ucInfoRecados_lblEscopo">
+           DCET0725 - MATEMÁTICA DISCRETA(T01COMP) - 20181
+          </span>
+          <span class="oculto">
+           Enviado em:
+          </span>
+          <span class="recado-data" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl03_ucInfoRecados_lblData">
+           25/7/2018
+          </span>
+          <span class="oculto">
+           Recado:
+          </span>
+          <p class="recado-texto">
+           <span>
+            Descrição do Recado:
+           </span>
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl03_ucInfoRecados_lblTextoRecado">
+            Apresentações dos conteúdos de Discreta feitas pelo prof. Paulo Blauth podem ser obtidos neste sítio 
+ftp://ftp.inf.ufrgs.br/pub/blauth/Discretas/
+           </span>
+          </p>
+          <p>
+           <span class="oculto" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl03_ucInfoRecados_lblAnexo">
+            Anexo:
+           </span>
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl03_ucInfoRecados_lblDsAnexo" target="_blank">
+           </span>
+           <span class="material_apoio_arquivo">
+           </span>
+          </p>
+          <span class="oculto">
+           Enviado por:
+          </span>
+          <i class="recado-remetente" style="float: left">
+           De
+           <span id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_Repeater_ctl03_ucInfoRecados_lblRemetente">
+            ALZIRA FERREIRA DA SILVA
+           </span>
+          </i>
+         </article>
+         <a class="webpart-detalhar cor-destaque" href="Consultas/Recados.aspx" id="ctl00_MasterPlaceHolder_ucMuralRecados_ucListaRecados_LinkVerTodos">
+          Exibir todos ›
+         </a>
+        </div>
+       </div>
+      </section>
+      <section class="webpart" id="ctl00_MasterPlaceHolder_divMeusHorarios">
+       <div class="webpart-titulo cor-destaque">
+        Meus horários
+       </div>
+       <div aria-hidden="true" class="meus-horarios-webpart">
+       </div>
+       <div class="msg-sem-registro" id="ctl00_MasterPlaceHolder_ucHorario_divNoRows">
+        Nenhum horário definido
+       </div>
+      </section>
+     </div>
+    </div>
+   </div>
+   <!-- Menu Slide -->
+   <nav class="menu-slide cor-destaque-bg" id="MenuSlide">
+    <a class="controle-menu-slide" id="ControleMenuSlide" tabindex="-1">
+     <span class="icone icone-esq-1">
+     </span>
+     <span class="controle-menu-txt">
+      Menu
+     </span>
+    </a>
+    <a class="oculto" href="#" id="irmenu">
+     Início do menu
+    </a>
+    <div class="menu-slide-scroll" id="MenuRolagem">
+     <div id="menu">
+      <!-- Menu de Ferramentas -->
+      <!-- Menu do conteúdo -->
+      <div id="ctl00_OutrosMenus">
+       <!-- Outros Menus -->
+       <div class="menu-bloco">
+        <div class="menu-titulo cor-destaque" id="ctl00_ctl13_TitleBar">
+         Acompanhamento
+        </div>
+        <div id="ctl00_ctl13_ContentMenu">
+         <!-- Conteúdo -->
+         <div class="menu-item">
+          <a href="Relatorio/Boletim.aspx">
+           Notas e faltas
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="Classe/ConsultaAulas.aspx">
+           Aulas
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="menu-bloco">
+        <div class="menu-titulo cor-destaque" id="ctl00_ctl14_TitleBar">
+         Consultas
+        </div>
+        <div id="ctl00_ctl14_ContentMenu">
+         <!-- Conteúdo -->
+         <div class="menu-item">
+          <a href="Relatorio/ConsultaPlanoEnsino.aspx">
+           Plano de Curso
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="Consultas/Recados.aspx">
+           Mural de Recados
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="Relatorio/ComprovanteMatricula.aspx">
+           Comprovante de matrícula
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="Relatorio/FluxogramaAluno.aspx">
+           Fluxograma
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="Relatorio/HistoricoEscolar.aspx">
+           Histórico escolar
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="Relatorio/AtividadesExtraCurriculares.aspx">
+           Atividade Extracurricular
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="menu-bloco">
+        <div class="menu-titulo cor-destaque" id="ctl00_ctl15_TitleBar">
+         Solicitações
+        </div>
+        <div id="ctl00_ctl15_ContentMenu">
+         <!-- Conteúdo -->
+         <div class="menu-item">
+          <a href="Academico/SolicitacaoServico.aspx">
+           Comprovante de Solicitação de serviços
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="Academico/CadastroSolicitacaoServico.aspx">
+           Cadastrar solicitações de serviço
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="Academico/CadastroSolicitacaoAtividadeComplementar.aspx">
+           Atividade complementar
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </nav>
+   <div class="vid-aula-banner cor-destaque-bg" id="vidAulaBanner">
+    <span class="icone icone-video cor-destaque-bg">
+    </span>
+    <p>
+     Existem vídeo aulas disponíveis para este conteúdo.
+    </p>
+    <input class="botao botao-cinza vid-aula-open" name="ctl00$ctl05$ctl00" onclick="return false;" type="submit" value="Assistir"/>
+   </div>
+   <div class="vid-aula-panel popupView popup" data-recurso="~/Modules/Diario/Aluno/Default.aspx" data-web-service-url="https://docs.tecnotrends.com.br/videoaulas/" id="vidAulaPanel">
+    <div class="vid-aula-bar">
+     <h1 class="popup-titulo cor-destaque">
+      Vídeo Aula
+     </h1>
+     <div class="vid-aula-btns">
+      <span class="icone icone-menos vid-aula-min-btn" title="Minimizar">
+      </span>
+      <span class="icone icone-popup vid-aula-max-btn" title="Maximizar">
+      </span>
+      <span class="icone icone-x vid-aula-close" title="Fechar">
+      </span>
+     </div>
+    </div>
+    <div class="vid-aula-video">
+     <div class="overlay" style="display: none;">
+     </div>
+     <div class="vid-aula-video-container">
+      <div id="vid-aula-player">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="rodape">
+    <div class="rodape-conteudo">
+     <a class="rodape-rolagem icone icone-cima-2" href="javascript:void(0);" onclick="$('html, body').animate({scrollTop:0}, 'fast');" style="display: none;" title="Voltar ao topo">
+     </a>
+     <div class="credito-trends">
+      Sagres Portal desenvolvido pela
+      <a class="creditos-logo" href="http://www.tecnotrends.com.br" target="_blank">
+       TecnoTRENDS Tecnologia Educacional
+      </a>
+     </div>
+    </div>
+    <script type="text/javascript">
+     $(window).scroll(function () {
+		if ($(window).scrollTop() + $(window).height() > $(document).height()) {
+			$(".rodape-rolagem").css("display", "none");
+		} else {
+			$(".rodape-rolagem").css("display", "block");
+		};
+
+	});
+    </script>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+_clientApp = new Trends.TFC.Ajax.Core.ClientApp({"standalone":true,"debugMode":false});
+
+clientPage = new Trends.TFC.Ajax.Core.ClientPage({"formId":"aspnetForm","pageUrl":"http://sagres.uesb.br/PortalSagres/Modules/Diario/Aluno/Default.aspx"});
+clientPage.addScriptInfo({"scriptType":"Trends.TFC.Ajax.Controls.SessionTimeout","options":{"id":"SessionTimeout","uniqueId":"ctl00$ConteudoTopo$SessionTimeout","clientId":"ctl00_ConteudoTopo_SessionTimeout","enablePopup":true,"enableAjax":false,"$:timeoutPopup":"#ctl00_ConteudoTopo_SessionTimeoutTimeoutPanel","$:textPanel":"#ctl00_ConteudoTopo_ctl16","timeoutValue":30,"handlerUrl":"/PortalSagres/SessionTimeoutHandler.ashx","loginPageUrl":"/PortalSagres/Default.aspx","notificationImageUrl":"","notificationIconUrl":"","notificationText":"Sua sessão está prestes a expirar. Clique aqui para continuar usando a aplicação.","notificationMode":0}});
+
+clientPage.addScriptInfo({"scriptType":"Trends.TFC.Ajax.Controls.SessionTimeout","options":{"id":"SessionTimeout1","uniqueId":"ctl00$ConteudoTopo$SessionTimeout1","clientId":"ctl00_ConteudoTopo_SessionTimeout1","enablePopup":true,"enableAjax":true,"$:timeoutPopup":"#ctl00_ConteudoTopo_SessionTimeout1TimeoutPanel","$:textPanel":"#ctl00_ConteudoTopo_ctl27","timeoutValue":30,"handlerUrl":"/PortalSagres/SessionTimeoutHandler.ashx","loginPageUrl":"/PortalSagres/Default.aspx","notificationImageUrl":"","notificationIconUrl":"","notificationText":"Sua sessão está prestes a expirar. Clique aqui para continuar usando a aplicação.","notificationMode":0}});
+
+Trends.TFC.Ajax.Core.Resources.setResources('eyJTZXNzaW9uVGltZW91dFRleHQiOiJ7MH1tIHsxfXMiLCJTZXNzaW9uVGltZW91dE1lc3NhZ2UiOiJTdWEgc2Vzc8OjbyBleHBpcmEgZW0gezB9bSB7MX1zIiwiRGlhbG9nRXJyb3JNZXNzYWdlIjoiT2NvcnJldSB1bSBlcnJvIGR1cmFudGUgYSBleGVjdcOnw6NvIGRvIHNjcmlwdCBjbGllbnRlIGRhIGFwbGljYcOnw6NvLiBQb3IgZmF2b3IsIHJlY2FycmVndWUgYSBww6FnaW5hIChhdHJhdsOpcyBkYSB0ZWNsYSBGNSkgZSB0ZW50ZSBub3ZhbWVudGUuIENhc28gbyBlcnJvIHBlcnNpc3RhLCBlbnRyZSBlbSBjb250YXRvIGNvbSBvcyBhZG1pbmlzdHJhZG9yZXMgZG8gc2l0ZS4iLCJEaWFsb2dSZW1vdmVZZXNUZXh0IjoiUmVtb3ZlciIsIkRpYWxvZ1JlbW92ZU5vVGV4dCI6IkNhbmNlbGFyIiwiRGlhbG9nWWVzQnV0dG9uIjoiU2ltIiwiRGlhbG9nTm9CdXR0b24iOiJOw6NvIiwiRGlhbG9nRGVmYXVsdFRpdGxlIjoiQXRlbsOnw6NvIiwiZXJyUmVxdWlyZWRFcnJvck1lc3NhZ2UiOiJPIGNhbXBvIFwiezB9XCIgw6kgZGUgcHJlZW5jaGltZW50byBvYnJpZ2F0w7NyaW8uIiwiZXJySW52YWxpZEVtYWlsIjoiVm9jw6ogZGV2ZSBmb3JuZWNlciB1bSBlbWFpbCB2w6FsaWRvIHBhcmEgbyBjYW1wbyBcInswfVwiLiIsIkRpYWxvZ0Fib3J0SWNvblVybCI6Ii9Qb3J0YWxTYWdyZXMvQXBwX1RoZW1lcy9OZXdUaGVtZS9pbWFnZXMvYWJvcnQtaWNvbi5wbmciLCJEaWFsb2dFeGNsYW1hdGlvbkljb25VcmwiOiIvUG9ydGFsU2FncmVzL0FwcF9UaGVtZXMvTmV3VGhlbWUvaW1hZ2VzL2V4Y2xhbWF0aW9uLWljb24ucG5nIiwiRGlhbG9nUXVlc3Rpb25JY29uVXJsIjoiL1BvcnRhbFNhZ3Jlcy9BcHBfVGhlbWVzL05ld1RoZW1lL2ltYWdlcy9xdWVzdGlvbi1pY29uLnBuZyIsIkRpYWxvZ1dhcm5pbmdJY29uVXJsIjoiL1BvcnRhbFNhZ3Jlcy9BcHBfVGhlbWVzL05ld1RoZW1lL2ltYWdlcy93YXJuaW5nLWljb24ucG5nIiwiRGlhbG9nSW5mb0ljb25VcmwiOiIvUG9ydGFsU2FncmVzL0FwcF9UaGVtZXMvTmV3VGhlbWUvaW1hZ2VzL2luZm8taWNvbi5wbmcifQ==');
+
+_clientApp.run();
+	Trends.InitWebForm();
+	Trends.InitWebFormAjax();
+//]]>
+   </script>
+  </form>
+ </body>
+</html>
